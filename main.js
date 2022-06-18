@@ -1,18 +1,18 @@
-const movie = {
-  title: 'a',
-  rate: 5.3,
-  director: 'b',
-  year: 2022,
+const numbers = [1, 2, 3, 4];
+
+const includes = (array, searchElement) => {
+  // for (let value of array)
+  //   if (value === searchElement) return true;
+
+  // return false;
+
+  // return array.filter((value) => {
+  //   return value === searchElement;
+  // });
+
+  return array.some((item) => {
+    return item === searchElement;
+  });
 };
 
-const showProperties = (obj) => {
-  // for (let key in obj) {
-  //   if (typeof obj[key] === 'string')
-  //     console.log(key, obj[key]);
-  // }
-
-  for (let properties of Object.keys(obj))
-    console.log(properties);
-};
-
-showProperties(movie);
+console.log(includes(numbers, 2));
