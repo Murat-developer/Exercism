@@ -1,22 +1,18 @@
-const countTruthy = (array) => {
-  // let count = 0;
-  // for (let value of array) if (value) count++;
-  // return count;
-
-  // array.forEach((value) => {
-  //   if (value) count++;
-  // });
-  // return count;
-
-  // const sum = array.filter(Boolean).length;
-  // return sum;
-
-  return array.reduce((acc, curr) => {
-    if (curr) {
-      return acc + 1;
-    }
-    return acc;
-  }, 0);
+const movie = {
+  title: 'a',
+  rate: 5.3,
+  director: 'b',
+  year: 2022,
 };
 
-console.log(countTruthy([1, 2, 3, 4, null, 0, '']));
+const showProperties = (obj) => {
+  // for (let key in obj) {
+  //   if (typeof obj[key] === 'string')
+  //     console.log(key, obj[key]);
+  // }
+
+  for (let properties of Object.keys(obj))
+    console.log(properties);
+};
+
+showProperties(movie);
