@@ -1,20 +1,22 @@
-// Raindrops
+const countTruthy = (array) => {
+  // let count = 0;
+  // for (let value of array) if (value) count++;
+  // return count;
 
-const convert = (rain) => {
-  let output = '';
-  if (rain % 3 === 0 && rain % 5 === 0 && rain % 7 === 0)
-    return 'PlingPlangPlong';
-  if (rain % 3 === 0 && rain % 5 === 0)
-    return 'PlingPlang';
-  if (rain % 3 === 0 && rain % 7 === 0)
-    return 'PlingPlong';
-  if (rain % 5 === 0 && rain % 7 === 0)
-    return 'PlangPlong';
-  if (rain % 3 === 0) return 'Pling';
-  if (rain % 5 === 0) return 'Plang';
-  if (rain % 7 === 0) return 'Plong';
-  if (rain % 3 !== 0 && rain % 5 !== 0 && rain % 7 !== 0)
-    output += rain;
-  return output;
+  // array.forEach((value) => {
+  //   if (value) count++;
+  // });
+  // return count;
+
+  // const sum = array.filter(Boolean).length;
+  // return sum;
+
+  return array.reduce((acc, curr) => {
+    if (curr) {
+      return acc + 1;
+    }
+    return acc;
+  }, 0);
 };
-console.log(convert(105));
+
+console.log(countTruthy([1, 2, 3, 4, null, 0, '']));
