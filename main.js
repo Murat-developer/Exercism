@@ -1,6 +1,16 @@
-const string = 'John Smith';
+function countWords(word) {
+  return word
+    .toLowerCase()
+    .match(/\w+('\w+)?/g)
+    .reduce(
+      (acc, curr) => ({
+        ...acc,
+        [curr]: ~~acc[curr] + 1,
+      }),
+      {},
+    );
+}
 
-const reverseStr = (input) => {
-  return input.split('').reverse().join('');
-};
-console.log(reverseStr(string));
+const string = 'You';
+
+console.log(countWords(string));
