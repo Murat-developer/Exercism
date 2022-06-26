@@ -1,16 +1,8 @@
-function countWords(word) {
-  return word
-    .toLowerCase()
-    .match(/\w+('\w+)?/g)
-    .reduce(
-      (acc, curr) => ({
-        ...acc,
-        [curr]: ~~acc[curr] + 1,
-      }),
-      {},
-    );
-}
+// Calculate day rate given an hourly rate;
 
-const string = 'You';
-
-console.log(countWords(string));
+const dayRate = (ratePerHour = 89) => {
+  // Default pramader
+  const hoursDay = 8;
+  return ratePerHour * hoursDay;
+};
+console.log(dayRate());
