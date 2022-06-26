@@ -1,8 +1,8 @@
-let str =
-  'Stands so high huge hooves too Impatiently wait for it';
+const word = 'world';
 
-const frontDoorResponse = (line) => {
-  // return line.charAt(0);
-  return line[0];
+const capitalizeWord = (input) => {
+  let start = input.charAt(0).toUpperCase();
+  let end = input.slice(1).toLowerCase();
+  return start + end;
 };
-console.log(frontDoorResponse(str));
+console.log(capitalizeWord(word));
