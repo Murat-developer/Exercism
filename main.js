@@ -1,9 +1,5 @@
-const retrieveCard = (
-  cards,
-  position,
-  replacementCard,
-) => {
-  cards[position] = replacementCard;
+const insertCardAtTheTop = (cards, newCards) => {
+  cards.push(newCards);
   return cards;
 };
-console.log(retrieveCard([1, 2, 4, 1], 2, 6));
+console.log(insertCardAtTheTop([5, 9, 7, 1], 8));
