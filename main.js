@@ -1,8 +1,10 @@
-const str = 'Stands so high';
+const str = 'COFFEE';
 
-const getLastLetter = (input) => {
-  let trimed = input.trim();
-  // return trimed[trimed.length - 1];
-  return trimed.charAt(trimed.length - 1);
+const bePolit = (input) => {
+  let start = input.charAt(0).toUpperCase();
+  let end = input.slice(1).toLowerCase();
+  // let polite = ', please';
+  // return start + end + polite;
+  return `${start}${end}, please`;
 };
-console.log(getLastLetter(str));
+console.log(bePolit(str));
