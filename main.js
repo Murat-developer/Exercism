@@ -1,5 +1,5 @@
-const insertCardAtTheTop = (cards, newCards) => {
-  cards.push(newCards);
+const removeCardFromStack = (cards, position) => {
+  cards.splice(position, 1);
   return cards;
 };
-console.log(insertCardAtTheTop([5, 9, 7, 1], 8));
+console.log(removeCardFromStack([3, 2, 6, 4, 8], 2));
