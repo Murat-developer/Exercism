@@ -1,5 +1,5 @@
-const removeCardFromTopStack = (cards) => {
-  cards.pop();
+const insertCardAtTheBottom = (cards, newCard) => {
+  cards.unshift(newCard);
   return cards;
 };
-console.log(removeCardFromTopStack([3, 2, 6, 4, 8]));
+console.log(insertCardAtTheBottom([5, 9, 7, 1], 8));
