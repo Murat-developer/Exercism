@@ -1,8 +1,8 @@
-const word = 'world';
+const str = 'Stands so high';
 
-const capitalizeWord = (input) => {
-  let start = input.charAt(0).toUpperCase();
-  let end = input.slice(1).toLowerCase();
-  return start + end;
+const getLastLetter = (input) => {
+  let trimed = input.trim();
+  // return trimed[trimed.length - 1];
+  return trimed.charAt(trimed.length - 1);
 };
-console.log(capitalizeWord(word));
+console.log(getLastLetter(str));
