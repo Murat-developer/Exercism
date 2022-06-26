@@ -1,10 +1,4 @@
-const str = 'COFFEE';
-
-const bePolit = (input) => {
-  let start = input.charAt(0).toUpperCase();
-  let end = input.slice(1).toLowerCase();
-  // let polite = ', please';
-  // return start + end + polite;
-  return `${start}${end}, please`;
+const retrieveCard = (cards, position) => {
+  return cards[position];
 };
-console.log(bePolit(str));
+console.log(retrieveCard([1, 2, 4, 1], 2));
