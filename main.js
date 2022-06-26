@@ -1,5 +1,4 @@
-const removeCardFromTheBottom = (cards) => {
-  cards.shift();
-  return cards;
+const checkSizeOfStack = (cards, stackSize) => {
+  return cards.length === stackSize;
 };
-console.log(removeCardFromTheBottom([8, 5, 9, 7, 1]));
+console.log(checkSizeOfStack([8, 5, 9, 7, 1], 4));
