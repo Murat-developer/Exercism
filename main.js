@@ -1,5 +1,6 @@
-const chooseVehicle = (option1, option2) => {
-  let choice = option1 < option2 ? option1 : option2;
-  return `${choice} is clearly better choice.`;
+const calculateResellPrice = (originalPrice, age) => {
+  if (age < 3) return 0.8 * originalPrice;
+  else if (age > 10) return 0.5 * originalPrice;
+  else return 0.7 * originalPrice;
 };
-console.log(chooseVehicle('Toyota Corolla', 'BMW sport'));
+console.log(calculateResellPrice(1000, 5));
