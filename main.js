@@ -1,6 +1,16 @@
-const calculateResellPrice = (originalPrice, age) => {
-  if (age < 3) return 0.8 * originalPrice;
-  else if (age > 10) return 0.5 * originalPrice;
-  else return 0.7 * originalPrice;
+const totalBirdCount = (birdsPerday) => {
+  let count = 0;
+  // for (let num of birdsPerday) count += num;
+  // return count;
+  // return birdsPerday.reduce((acc, curr) => acc + curr);
+
+  birdsPerday.forEach((num) => {
+    if (num) count += num;
+  });
+  return count;
 };
-console.log(calculateResellPrice(1000, 5));
+console.log(
+  totalBirdCount([
+    2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1,
+  ]),
+);
