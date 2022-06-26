@@ -1,5 +1,5 @@
-const removeCardFromStack = (cards, position) => {
-  cards.splice(position, 1);
+const removeCardFromTopStack = (cards) => {
+  cards.pop();
   return cards;
 };
-console.log(removeCardFromStack([3, 2, 6, 4, 8], 2));
+console.log(removeCardFromTopStack([3, 2, 6, 4, 8]));
