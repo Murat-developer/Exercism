@@ -1,4 +1,4 @@
-const checkSizeOfStack = (cards, stackSize) => {
-  return cards.length === stackSize;
+const needsLicense = (input) => {
+  return input === 'car' || input === 'truck';
 };
-console.log(checkSizeOfStack([8, 5, 9, 7, 1], 4));
+console.log(needsLicense('truck'));
