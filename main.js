@@ -1,5 +1,5 @@
-const insertCardAtTheBottom = (cards, newCard) => {
-  cards.unshift(newCard);
+const removeCardFromTheBottom = (cards) => {
+  cards.shift();
   return cards;
 };
-console.log(insertCardAtTheBottom([5, 9, 7, 1], 8));
+console.log(removeCardFromTheBottom([8, 5, 9, 7, 1]));
