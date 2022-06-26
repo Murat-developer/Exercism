@@ -1,12 +1,19 @@
-// Calculate number of workdays
-
-const daysInBudget = (
-  budget = 20000,
-  ratePerHour = 89,
+const priceWithMonthlyDiscount = (
+  ratePerHour,
+  numDays,
+  discount,
 ) => {
-  const fixedDays = 8;
-  const dayRate = ratePerHour * fixedDays;
-
-  return Math.floor(budget / dayRate);
+  const hoursDay = 8;
+  const billAbleDays = 22;
+  const discountDays = numDays - (numDays % billAbleDays);
+  const fullPriceDays = numDays % billAbleDays;
+  return Math.ceil(
+    ratePerHour * hoursDay * fullPriceDays +
+      ratePerHour *
+        hoursDay *
+        discountDays *
+        (1 - discount),
+  );
 };
-console.log(daysInBudget());
+
+console.log(priceWithMonthlyDiscount(89, 230, 0.42));
