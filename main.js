@@ -1,16 +1,13 @@
-const totalBirdCount = (birdsPerday) => {
-  let count = 0;
-  // for (let num of birdsPerday) count += num;
-  // return count;
-  // return birdsPerday.reduce((acc, curr) => acc + curr);
+const deck = [1, 3, 9, 3, 7];
 
-  birdsPerday.forEach((num) => {
-    if (num) count += num;
-  });
-  return count;
+const threeOfEachThree = (deck) => {
+  return deck.reduce((acc, curr) => {
+    if (curr === 3) {
+      acc.push(curr, curr, curr);
+    } else {
+      acc.push(curr);
+    }
+    return acc;
+  }, []);
 };
-console.log(
-  totalBirdCount([
-    2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1,
-  ]),
-);
+console.log(threeOfEachThree(deck));
