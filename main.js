@@ -1,6 +1,13 @@
-const number = 25;
+const numbers = [5, 8, 6, 3, 4];
 
-const isSquare = (n) => {
-  return Math.sqrt(n) % 1 === 0;
+const sortArray = (array) => {
+  const odd = array
+    .filter((el) => {
+      return el % 2;
+    })
+    .sort((a, b) => a - b);
+  return array.map((item) => {
+    return item % 2 ? odd.shift() : item;
+  });
 };
-console.log(number);
+console.log(sortArray(numbers));
