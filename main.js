@@ -1,12 +1,11 @@
-const arrays = [0, 1, 5];
+const str = 'middle';
 
-const oddOrEven = (array) => {
-  if (array.length === 0) return 'even';
-  else {
-    let sum = array.reduce((acc, curr) => {
-      return acc + curr;
-    }, 0);
-    return sum % 2 === 0 ? 'even' : 'odd';
+const getMiddle = (s) => {
+  let middle = Math.floor(s.length / 2);
+  if (s.length % 2 === 0) {
+    return s[middle - 1] + s[middle];
+  } else {
+    return s[middle];
   }
 };
-console.log(oddOrEven(arrays));
+console.log(getMiddle(str));
