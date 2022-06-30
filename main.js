@@ -1,13 +1,13 @@
-const deck = [1, 3, 9, 3, 7];
+const str = 'abCdE232';
 
-const threeOfEachThree = (deck) => {
-  return deck.reduce((acc, curr) => {
-    if (curr === 3) {
-      acc.push(curr, curr, curr);
-    } else {
-      acc.push(curr);
-    }
-    return acc;
-  }, []);
+const foundString = (input) => {
+  return (
+    input
+      .toLowerCase()
+      .split('')
+      .sort()
+      .join('')
+      .match(/([^])\1+/g) || []
+  ).length;
 };
-console.log(threeOfEachThree(deck));
+console.log(foundString(str));
