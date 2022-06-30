@@ -1,13 +1,13 @@
-const numbers = [5, 8, 6, 3, 4];
+const str = 'The quick brown fox jumps over the lazy dog';
 
-const sortArray = (array) => {
-  const odd = array
-    .filter((el) => {
-      return el % 2;
-    })
-    .sort((a, b) => a - b);
-  return array.map((item) => {
-    return item % 2 ? odd.shift() : item;
-  });
+const isPangram = (string) => {
+  return (
+    string
+      .toLowerCase()
+      .match(/[a-z]/g)
+      .sort()
+      .join('')
+      .replace(/(.)\1+/g, '$1').length === 26
+  );
 };
-console.log(sortArray(numbers));
+console.log(isPangram(str));
