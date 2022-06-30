@@ -1,13 +1,6 @@
-const str = 'abCdE232';
+const number = 25;
 
-const foundString = (input) => {
-  return (
-    input
-      .toLowerCase()
-      .split('')
-      .sort()
-      .join('')
-      .match(/([^])\1+/g) || []
-  ).length;
+const isSquare = (n) => {
+  return Math.sqrt(n) % 1 === 0;
 };
-console.log(foundString(str));
+console.log(number);
