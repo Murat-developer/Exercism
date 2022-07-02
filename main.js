@@ -1,7 +1,8 @@
-const highAndLow = (numbers) => {
-  numbers = numbers.split(' ');
-  return `${Math.max(...numbers)} ${Math.min(
-    ...numbers,
+const findNeedle = (haystack) => {
+  return `found the needle at position ${haystack.indexOf(
+    'needle',
   )}`;
 };
-console.log(highAndLow('1 2 3'));
+console.log(
+  findNeedle(['junk', 'hay', 'randomJunk', 'needle']),
+);
