@@ -1,8 +1,7 @@
-const findNeedle = (haystack) => {
-  return `found the needle at position ${haystack.indexOf(
-    'needle',
-  )}`;
+const doubleChar = (str) => {
+  return str
+    .split('')
+    .map((s) => s + s)
+    .join('');
 };
-console.log(
-  findNeedle(['junk', 'hay', 'randomJunk', 'needle']),
-);
+console.log(doubleChar('String'));
