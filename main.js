@@ -1,11 +1,7 @@
-const str = 'middle';
-
-const getMiddle = (s) => {
-  let middle = Math.floor(s.length / 2);
-  if (s.length % 2 === 0) {
-    return s[middle - 1] + s[middle];
-  } else {
-    return s[middle];
-  }
+const highAndLow = (numbers) => {
+  numbers = numbers.split(' ');
+  return (
+    Math.max(...numbers) + ' ' + Math.min(...numbers)
+  );
 };
-console.log(getMiddle(str));
+console.log(highAndLow('1 2 3'));
