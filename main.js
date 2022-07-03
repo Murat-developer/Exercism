@@ -1,7 +1,4 @@
-const oppositeNum = (num) => {
-  // return -num;
-
-  // second iteration
-  return (num *= -1);
+const strToNum = (str) => {
+  return +str;
 };
-console.log(oppositeNum(5));
+console.log(strToNum('5'));
