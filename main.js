@@ -1,25 +1,14 @@
-const correctMistakes = (inputString) => {
-  // organize correctioins in an object / map
-  const corrections = {
-    5: 'S',
-    0: 'O',
-    1: 'I',
-  };
+const reversWord = (str) => {
+  // first iteration
 
-  return (
-    inputString
-      // split the string into an arrray of characters
-      .split('')
-      //check if the current character is in the corrections object
-      // if it is , correct it , else return it unchanged
-      .map((el) =>
-        corrections.hasOwnProperty(el)
-          ? corrections[el]
-          : el,
-      )
-      // join the array of characters to a string
-      .join('')
-  );
+  // let output = '' ;
+  // for(let i = str.length - 1; i >= 0; i--)
+  // output += str[i];
+  // return output;
+
+  // second iteration
+  // return str.split('').reverse().join('');
+  // Spread operator
+  return [...str].reverse().join('');
 };
-
-console.log(correctMistakes('Par15'));
+console.log(reversWord('Word'));
