@@ -1,4 +1,12 @@
-const strToNum = (str) => {
-  return +str;
+const sentenceSmash = (word) => {
+  return word.join(' ');
 };
-console.log(strToNum('5'));
+console.log(
+  sentenceSmash([
+    'Hello',
+    'World',
+    'this',
+    'is',
+    'great',
+  ]),
+);
