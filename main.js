@@ -1,14 +1,7 @@
-const reversWord = (str) => {
-  // first iteration
-
-  // let output = '' ;
-  // for(let i = str.length - 1; i >= 0; i--)
-  // output += str[i];
-  // return output;
+const oppositeNum = (num) => {
+  // return -num;
 
   // second iteration
-  // return str.split('').reverse().join('');
-  // Spread operator
-  return [...str].reverse().join('');
+  return (num *= -1);
 };
-console.log(reversWord('Word'));
+console.log(oppositeNum(5));
