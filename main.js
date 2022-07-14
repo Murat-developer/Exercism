@@ -1,13 +1,7 @@
-const cheessboard = (input) => {
-  let output = '';
-  for (let i = 1; i <= input; i++) {
-    for (let x = 1; x <= input; x++) {
-      (i + x) % 2 === 0
-        ? (output += ' ')
-        : (output += '#');
-    }
-    output += '\n';
-  }
-  console.log(output);
-};
-cheessboard(8);
+function isEven(num) {
+  if (num === 0) return true;
+  if (num === 1) return false;
+  if (num > 0) return isEven(num - 2);
+  else return isEven(-num);
+}
+console.log(isEven(-1));
